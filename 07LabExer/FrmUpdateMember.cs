@@ -60,6 +60,12 @@ namespace LabExerFinals
             cmbProgram.Text = row["Program"].ToString();
         }
 
+        private void FrmUpdateMember_Load(object sender, EventArgs e)
+        {
+            clubRegistrationQuery = new ClubRegistrationQuery();
+            LoadStudentIDs();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (cmbStudentID.SelectedValue == null)
@@ -107,12 +113,6 @@ namespace LabExerFinals
                 MessageBox.Show("Error updating record:\n" + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void FrmUpdateMember_Load(object sender, EventArgs e)
-        {
-            clubRegistrationQuery = new ClubRegistrationQuery();
-            LoadStudentIDs();
         }
     }
 }

@@ -89,6 +89,9 @@
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.cmbGender.Location = new System.Drawing.Point(178, 425);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGender.Name = "cmbGender";
@@ -98,6 +101,11 @@
             // cmbProgram
             // 
             this.cmbProgram.FormattingEnabled = true;
+            this.cmbProgram.Items.AddRange(new object[] {
+            "BS in Computer Science",
+            "BS in Information Technology",
+            "BS in Business Administration",
+            "BS in Hospitality Management"});
             this.cmbProgram.Location = new System.Drawing.Point(178, 494);
             this.cmbProgram.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProgram.Name = "cmbProgram";
@@ -113,6 +121,7 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
